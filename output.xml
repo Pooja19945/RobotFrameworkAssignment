@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.7 on win32)" generated="20221013 10:20:15.629" rpa="false" schemaversion="3">
+<suite id="s1" name="Test" source="C:\Users\pooshind2\Desktop\Project\RobotFrameworkAssignment\Automation\test.robot">
+<test id="s1-t1" name="FindLinks" line="9">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221013 10:20:15.773" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<status status="PASS" starttime="20221013 10:20:15.773" endtime="20221013 10:20:19.487"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221013 10:20:19.488" endtime="20221013 10:20:19.501"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221013 10:20:19.501" endtime="20221013 10:20:19.625"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Google</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20221013 10:20:19.631" level="INFO">Page title is 'Google'.</msg>
+<status status="PASS" starttime="20221013 10:20:19.626" endtime="20221013 10:20:19.631"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${search_box}</var>
+<arg>xpath:/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221013 10:20:19.631" level="INFO">${search_box} = xpath:/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input</msg>
+<status status="PASS" starttime="20221013 10:20:19.631" endtime="20221013 10:20:19.631"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${search_box}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20221013 10:20:19.632" endtime="20221013 10:20:19.657"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${search_box}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221013 10:20:19.674" level="INFO">Element 'xpath:/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input' is displayed.</msg>
+<status status="PASS" starttime="20221013 10:20:19.657" endtime="20221013 10:20:19.674"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input</arg>
+<arg>robotframework</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221013 10:20:19.674" level="INFO">Typing text 'robotframework' into text field 'xpath:/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input'.</msg>
+<status status="PASS" starttime="20221013 10:20:19.674" endtime="20221013 10:20:19.760"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20221013 10:20:19.762" level="INFO">Sending key(s) ('ENTER',) to xpath:/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input element.</msg>
+<msg timestamp="20221013 10:20:20.050" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20221013 10:20:20.050" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20221013 10:20:19.762" endtime="20221013 10:20:23.158"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221013 10:20:33.168" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20221013 10:20:23.159" endtime="20221013 10:20:33.168"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//a[@href='https://robotframework.org/']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221013 10:20:33.168" endtime="20221013 10:20:33.200"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${href_fLink}</var>
+<arg>xpath:(//a//cite[contains(text(),"http")])[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221013 10:20:33.231" level="INFO">${href_fLink} = https://robotframework.org</msg>
+<status status="PASS" starttime="20221013 10:20:33.200" endtime="20221013 10:20:33.231"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${href_fLink}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221013 10:20:33.231" endtime="20221013 10:20:33.231"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${first_link}</var>
+<arg>xpath:(//a//h3[contains(text(),"Robot Framework")])[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221013 10:20:33.263" level="INFO">${first_link} = Robot Framework</msg>
+<status status="PASS" starttime="20221013 10:20:33.231" endtime="20221013 10:20:33.263"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${first_link}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221013 10:20:33.263" endtime="20221013 10:20:33.263"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>@{LinkItems}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20221013 10:20:33.263" level="INFO">@{LinkItems} = [ ]</msg>
+<status status="PASS" starttime="20221013 10:20:33.263" endtime="20221013 10:20:33.263"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>5</value>
+<value>9</value>
+<iter>
+<var name="${i}">5</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${href_OfLink}</var>
+<arg>xpath:(//a//cite[contains(text(),"http")])[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221013 10:20:33.319" level="INFO">${href_OfLink} = </msg>
+<status status="PASS" starttime="20221013 10:20:33.263" endtime="20221013 10:20:33.319"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${href_OfLink}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221013 10:20:33.319" endtime="20221013 10:20:33.319"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text_OfLink}</var>
+<arg>xpath:(//a//h3[contains(text(),"Robot Framework")])[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221013 10:20:33.337" level="INFO">${text_OfLink} = </msg>
+<status status="PASS" starttime="20221013 10:20:33.319" endtime="20221013 10:20:33.337"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${text_OfLink}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221013 10:20:33.337" endtime="20221013 10:20:33.337"/>
+</kw>
+<status status="PASS" starttime="20221013 10:20:33.263" endtime="20221013 10:20:33.337"/>
+</iter>
+<iter>
+<var name="${i}">6</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${href_OfLink}</var>
+<arg>xpath:(//a//cite[contains(text(),"http")])[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221013 10:20:33.354" level="INFO">${href_OfLink} = https://github.com › robotframework › robotframework</msg>
+<status status="PASS" starttime="20221013 10:20:33.337" endtime="20221013 10:20:33.354"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${href_OfLink}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221013 10:20:33.354" endtime="20221013 10:20:33.354"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text_OfLink}</var>
+<arg>xpath:(//a//h3[contains(text(),"Robot Framework")])[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221013 10:20:33.386" level="INFO">${text_OfLink} = Robot Framework - GitHub</msg>
+<status status="PASS" starttime="20221013 10:20:33.354" endtime="20221013 10:20:33.386"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${text_OfLink}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221013 10:20:33.386" endtime="20221013 10:20:33.386"/>
+</kw>
+<status status="PASS" starttime="20221013 10:20:33.337" endtime="20221013 10:20:33.386"/>
+</iter>
+<iter>
+<var name="${i}">7</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${href_OfLink}</var>
+<arg>xpath:(//a//cite[contains(text(),"http")])[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221013 10:20:33.417" level="INFO">${href_OfLink} = https://www.tutorialspoint.com › robot_framework</msg>
+<status status="PASS" starttime="20221013 10:20:33.386" endtime="20221013 10:20:33.417"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${href_OfLink}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221013 10:20:33.417" endtime="20221013 10:20:33.417"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text_OfLink}</var>
+<arg>xpath:(//a//h3[contains(text(),"Robot Framework")])[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221013 10:20:33.435" level="INFO">${text_OfLink} = Robot Framework Tutorial - Tutorialspoint</msg>
+<status status="PASS" starttime="20221013 10:20:33.417" endtime="20221013 10:20:33.435"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${text_OfLink}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221013 10:20:33.435" endtime="20221013 10:20:33.435"/>
+</kw>
+<status status="PASS" starttime="20221013 10:20:33.386" endtime="20221013 10:20:33.435"/>
+</iter>
+<iter>
+<var name="${i}">8</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${href_OfLink}</var>
+<arg>xpath:(//a//cite[contains(text(),"http")])[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221013 10:20:33.451" level="INFO">${href_OfLink} = https://robocorp.com › docs › robot-framework › basics</msg>
+<status status="PASS" starttime="20221013 10:20:33.435" endtime="20221013 10:20:33.451"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${href_OfLink}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221013 10:20:33.451" endtime="20221013 10:20:33.467"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text_OfLink}</var>
+<arg>xpath:(//a//h3[contains(text(),"Robot Framework")])[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221013 10:20:33.484" level="INFO">${text_OfLink} = Basic concepts of Robot Framework | Robocorp documentation</msg>
+<status status="PASS" starttime="20221013 10:20:33.467" endtime="20221013 10:20:33.484"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${text_OfLink}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221013 10:20:33.484" endtime="20221013 10:20:33.484"/>
+</kw>
+<status status="PASS" starttime="20221013 10:20:33.435" endtime="20221013 10:20:33.484"/>
+</iter>
+<status status="PASS" starttime="20221013 10:20:33.263" endtime="20221013 10:20:33.484"/>
+</for>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221013 10:20:33.484" endtime="20221013 10:20:35.690"/>
+</kw>
+<status status="PASS" starttime="20221013 10:20:15.773" endtime="20221013 10:20:35.690"/>
+</test>
+<doc>Test the links on webPage</doc>
+<status status="PASS" starttime="20221013 10:20:15.629" endtime="20221013 10:20:35.690"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
